@@ -2,7 +2,7 @@ import React from 'react';
 
 const Nav = () => {
   return (
-    <header className='flex text-white justify-between max-w-7xl mx-auto relative z-20 py-10'>
+    <header className='flex text-white justify-between max-w-7xl mx-auto relative z-20 py-8.5'>
       <h1 className='text-2xl'>Logo</h1>
 
       <nav>
@@ -13,6 +13,8 @@ const Nav = () => {
           <li>Contact</li>
         </ul>
       </nav>
+
+      <button className='text-2xl'>Lets's talk</button>
     </header>
   );
 };

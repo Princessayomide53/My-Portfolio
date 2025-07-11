@@ -11,6 +11,18 @@ const Hero = () => {
       <video autoPlay loop playsInline muted className='w-full'>
         <source src='/Assets/nextbot.mp4' type='video/mp4' />
       </video>
+
+      <video autoPlay loop playsInline muted className='w-full'>
+        <source src='/Assets/unchained.mp4' type='video/mp4' />
+      </video>
+
+      <video autoPlay loop playsInline muted className='w-full'>
+        <source src='/Assets/chips.mp4' type='video/mp4' />
+      </video>
+
+      <video autoPlay loop playsInline muted className='w-full'>
+        <source src='/Assets/chips2.mp4' type='video/mp4' />
+      </video>
     </section>
   );
 };
