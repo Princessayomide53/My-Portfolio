@@ -1,9 +1,11 @@
+import Image from 'next/image';
 import React from 'react';
+import Logo from '../../public/Assets/Logo.svg';
 
 const Nav = () => {
   return (
-    <header className='flex text-white justify-between max-w-7xl mx-auto relative z-20 py-8.5'>
-      <h1 className='text-2xl'>Logo</h1>
+    <header className='flex text-white justify-between items-center max-w-7xl mx-auto relative z-20 py-8.5'>
+      <Image src={Logo} alt='logo' />
 
       <nav>
         <ul className='flex space-x-8 text-xl'>
