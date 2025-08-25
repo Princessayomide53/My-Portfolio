@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
-import { Schibsted_Grotesk } from 'next/font/google';
+import { Schibsted_Grotesk, Poppins } from 'next/font/google';
 import './globals.css';
 
-const Schibs = Schibsted_Grotesk({
-  variable: '--font-Schibsted-grotesk',
+const Pops = Poppins({
   subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-poppins',
+});
+
+const Schibs = Schibsted_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-schibsted',
 });
 
 export const metadata: Metadata = {
@@ -19,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${Schibs.variable}  antialiased`}>{children}</body>
+      <body className={` ${Pops.variable} ${Schibs.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
