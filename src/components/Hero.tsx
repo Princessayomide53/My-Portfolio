@@ -36,16 +36,16 @@ const Hero = () => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     tl.from(textRef.current.querySelector('h4'), {
-      y: 50,
+      y: 100,
       opacity: 0,
-      duration: 0.6,
+      duration: 1,
     })
       .to(
         textRef.current.querySelectorAll('h2 .line span'),
         {
           y: 0,
-          duration: 1,
-          stagger: 0.1,
+          duration: 1.3,
+          stagger: 1.2,
         },
         '-=0.3'
       )
@@ -54,7 +54,8 @@ const Hero = () => {
         {
           y: 40,
           opacity: 0,
-          duration: 0.8,
+          stagger: 0.27,
+          duration: 2,
         },
         '-=0.4'
       )
@@ -63,8 +64,8 @@ const Hero = () => {
         {
           y: 30,
           opacity: 0,
-          stagger: 0.2,
-          duration: 0.6,
+          stagger: 0.17,
+          duration: 2.25,
         },
         '-=0.3'
       )
@@ -73,8 +74,8 @@ const Hero = () => {
         {
           y: 20,
           opacity: 0,
-          stagger: 0.15,
-          duration: 0.5,
+          stagger: 0.19,
+          duration: 2,
         },
         '-=0.4'
       );
@@ -82,7 +83,11 @@ const Hero = () => {
 
   useEffect(() => {
     const aboutBtn = document.querySelector('.about-btn');
-    gsap.set(aboutBtn, { position: 'relative', overflow: 'hidden' });
+    gsap.set(aboutBtn, {
+      position: 'relative',
+      overflow: 'hidden',
+      color: 'white',
+    });
 
     const aboutBg = document.createElement('span');
     aboutBg.classList.add('about-bg');
@@ -96,18 +101,24 @@ const Hero = () => {
       height: '100%',
       backgroundColor: 'white',
       zIndex: -1,
-      color: 'black',
     });
 
     aboutBtn?.addEventListener('mouseenter', () => {
       gsap.to(aboutBg, { top: '0%', duration: 0.4, ease: 'power2.out' });
+      gsap.to(aboutBtn, { color: 'black', duration: 0.3, ease: 'power2.out' });
     });
     aboutBtn?.addEventListener('mouseleave', () => {
       gsap.to(aboutBg, { top: '-100%', duration: 0.4, ease: 'power2.in' });
+      gsap.to(aboutBtn, { color: 'white', duration: 0.3, ease: 'power2.in' });
     });
 
+    // book-btn
     const bookBtn = document.querySelector('.book-btn');
-    gsap.set(bookBtn, { position: 'relative', overflow: 'hidden' });
+    gsap.set(bookBtn, {
+      position: 'relative',
+      overflow: 'hidden',
+      color: 'white',
+    });
 
     const bookBg = document.createElement('span');
     bookBg.classList.add('book-bg');
@@ -125,9 +136,11 @@ const Hero = () => {
 
     bookBtn?.addEventListener('mouseenter', () => {
       gsap.to(bookBg, { bottom: '0%', duration: 0.4, ease: 'power2.out' });
+      gsap.to(bookBtn, { color: 'black', duration: 0.3, ease: 'power2.out' });
     });
     bookBtn?.addEventListener('mouseleave', () => {
       gsap.to(bookBg, { bottom: '-100%', duration: 0.4, ease: 'power2.in' });
+      gsap.to(bookBtn, { color: 'white', duration: 0.3, ease: 'power2.in' });
     });
   }, []);
 
@@ -239,7 +252,7 @@ const Hero = () => {
         </div>
         <div className='flex space-x-12 px-5 mt-2'>
           <a
-            href='https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME'
+            href='https://www.linkedin.com/in/princess-ayomide-ogunnaike-235b25211'
             target='_blank'
             rel='noopener noreferrer'
           >
