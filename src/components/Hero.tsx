@@ -112,7 +112,6 @@ const Hero = () => {
       gsap.to(aboutBtn, { color: 'white', duration: 0.3, ease: 'power2.in' });
     });
 
-    // book-btn
     const bookBtn = document.querySelector('.book-btn');
     gsap.set(bookBtn, {
       position: 'relative',
